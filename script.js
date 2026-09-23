@@ -252,7 +252,7 @@ function kirimKeGuru(){
   if(getSession().role!=="student"){ alert("Tombol ini untuk peserta. Guru tidak perlu mengirim nilai."); return; }
   if(!lastScores){ alert('Klik "Hitung Nilai" dulu sebelum kirim.'); return; }
   const ssn=getSession();
-  const payload={ token:SEND_TOKEN, nama:ssn.name||"", kelas:ssn.kelas||"", tanggal:ssn.date||"",
+  const payload={ token:SEND_TOKEN,  babId: SETTINGS.babId ||"", nama:ssn.name||"", kelas:ssn.kelas||"", tanggal:ssn.date||"",
     moji:lastScores.moji.correct, kaiwa:lastScores.kaiwa.correct, choikai:lastScores.choikai.correct, dokkai:lastScores.dokkai.correct,
     rawJFT:lastScores.rawJFT, totalJFT:lastScores.totalJFT, ujianBabNilai:round1(lastScores.ujianBabNilai),
     kanjiBenar:lastScores.kanji.correct, kanjiNilai:round1(lastScores.kanjiNilai),
