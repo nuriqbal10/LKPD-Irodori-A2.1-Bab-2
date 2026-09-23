@@ -252,14 +252,30 @@ function kirimKeGuru(){
   if(getSession().role!=="student"){ alert("Tombol ini untuk peserta. Guru tidak perlu mengirim nilai."); return; }
   if(!lastScores){ alert('Klik "Hitung Nilai" dulu sebelum kirim.'); return; }
   const ssn=getSession();
-  const payload={ token:SEND_TOKEN,  babId: SETTINGS.babId ||"", nama:ssn.name||"", kelas:ssn.kelas||"", tanggal:ssn.date||"",
-    moji:lastScores.moji.correct, kaiwa:lastScores.kaiwa.correct, choikai:lastScores.choikai.correct, dokkai:lastScores.dokkai.correct,
-    rawJFT:lastScores.rawJFT, totalJFT:lastScores.totalJFT, ujianBabNilai:round1(lastScores.ujianBabNilai),
-    kanjiBenar:lastScores.kanji.correct, kanjiNilai:round1(lastScores.kanjiNilai),
-    kosakataBenar:lastScores.kosakataCorrect, kosakataNilai:round1(lastScores.kosakataNilai),
-    trSum:lastScores.trSum, trMax:lastScores.trMax, terjemahanNilai:round1(lastScores.terjemahanNilai),
-    finalNilai:round1(lastScores.finalNilai), jftLikeScale:round1(lastScores.jftLikeScale),
-    status:lastScores.statusText, weaknesses:lastWeaknesses.join(", ") };
+  const payload={ 
+    token:SEND_TOKEN,  
+    babId: SETTINGS.babId ||"", 
+    nama:ssn.name||"", 
+    kelas:ssn.kelas||"", 
+    tanggal:ssn.date||"",
+    moji:lastScores.moji.correct, 
+    kaiwa:lastScores.kaiwa.correct, 
+    choikai:lastScores.choikai.correct, 
+    dokkai:lastScores.dokkai.correct,
+    rawJFT:lastScores.rawJFT, 
+    totalJFT:lastScores.totalJFT, 
+    ujianBabNilai:round1(lastScores.ujianBabNilai),
+    kanjiBenar:lastScores.kanji.correct, 
+    kanjiNilai:round1(lastScores.kanjiNilai),
+    kosakataBenar:lastScores.kosakataCorrect, 
+    kosakataNilai:round1(lastScores.kosakataNilai),
+    trSum:lastScores.trSum, 
+    trMax:lastScores.trMax, 
+    terjemahanNilai:round1(lastScores.terjemahanNilai),
+    finalNilai:round1(lastScores.finalNilai), 
+    jftLikeScale:round1(lastScores.jftLikeScale),
+    status:lastScores.statusText, 
+    weaknesses:lastWeaknesses.join(", ") };
   const btn=document.getElementById("btnKirim"); if(btn){btn.disabled=true;btn.textContent="Mengirim…";} setKirimMsg("");
   const qs=new URLSearchParams(payload).toString();
   fetch(SHEET_WEB_APP_URL+"?"+qs,{method:"GET",mode:"no-cors"})
