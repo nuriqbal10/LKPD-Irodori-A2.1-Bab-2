@@ -11,7 +11,7 @@ window.LKPD_DATA = {
     sessionKey: "lkpd_bab2_session_v1",
     stateKey:   "lkpd_bab2_state_v1",
     listeningPlayCount: 2,
-    showListeningControls: false      // true untuk latihan bebas; false untuk mini test
+    showListeningControls: false,      // true untuk latihan bebas; false untuk mini test
     babId: "bab2" 
   },
 
