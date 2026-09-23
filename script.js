@@ -9,7 +9,7 @@ const SETTINGS = DATA.settings || {};
 
 const SESSION_KEY = SETTINGS.sessionKey || "lkpd_bab1_session_v4";
 const STATE_KEY = SETTINGS.stateKey || "lkpd_bab1_state_v4";
-const TEACHER_PASSWORD_HASH = SETTINGS.teacherPasswordHash || "";
+const TEACHER_PASSWORD_HASH = SETTINGS.teacherPasswordHash || "bf40852689717a13bd951c9df2181651a5ce8862240574ae7b64a14ee323531a";
 const LISTENING_PLAY_COUNT = Number(SETTINGS.listeningPlayCount || 2);
 const SHOW_LISTENING_CONTROLS = SETTINGS.showListeningControls === true;
 
