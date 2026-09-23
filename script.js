@@ -248,7 +248,7 @@ function showResultTab(){ const rt=findTabByType("result"); if(!rt)return; const
 function setKirimMsg(kind){ const m=document.getElementById("kirimMsg"); if(!m)return; if(kind==="ok"){m.style.color="#2b8a3e";m.textContent="Terkirim. Nilai Anda masuk ke rekap guru (mungkin butuh ~1 menit).";} else if(kind==="err"){m.style.color="#c92a2a";m.textContent="Gagal mengirim (jaringan/URL?). Coba lagi atau hubungi guru."; } else {m.textContent="";} }
 
 function kirimKeGuru(){
-  if(!SHEET_WEB_APP_URL){ alert("URL pengiriman belum di-set. Guru: tempel URL Web App Apps Script ke SHEET_WEB_APP_URL di script.js, lalu push."); return; }
+  if(!SHEET_WEB_APP_URL){ alert("https://script.google.com/macros/s/AKfycbydBVyG6aZOK5BqTHFKpc1tM0I9OfSyAoDY1qXVCMuJli0ie6FqIHw6l6McmCnpxVxo/exec"); return; }
   if(getSession().role!=="student"){ alert("Tombol ini untuk peserta. Guru tidak perlu mengirim nilai."); return; }
   if(!lastScores){ alert('Klik "Hitung Nilai" dulu sebelum kirim.'); return; }
   const ssn=getSession();
