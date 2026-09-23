@@ -7,8 +7,8 @@
 const DATA = window.LKPD_DATA || { settings: {}, tabs: [] };
 const SETTINGS = DATA.settings || {};
 
-const SESSION_KEY = SETTINGS.sessionKey || "lkpd_bab1_session_v4";
-const STATE_KEY = SETTINGS.stateKey || "lkpd_bab1_state_v4";
+const SESSION_KEY = SETTINGS.sessionKey || "lkpd_bab2_session_v4";
+const STATE_KEY = SETTINGS.stateKey || "lkpd_bab2_state_v4";
 const TEACHER_PASSWORD_HASH = SETTINGS.teacherPasswordHash || "bf40852689717a13bd951c9df2181651a5ce8862240574ae7b64a14ee323531a";
 const LISTENING_PLAY_COUNT = Number(SETTINGS.listeningPlayCount || 2);
 const SHOW_LISTENING_CONTROLS = SETTINGS.showListeningControls === true;
@@ -16,7 +16,7 @@ const SHOW_LISTENING_CONTROLS = SETTINGS.showListeningControls === true;
 /* ===== PENGIRIMAN NILAI (isi ini) ===== */
 const SHEET_WEB_APP_URL = "https://script.google.com/macros/s/AKfycbydufvt6cBNIKrclA71S1Vwlq_SlKl52D1OmhWi0VWGKnKsrXcoe4iOWt5hufj1K4zk/exec";                 // <-- tempel URL Web App Apps Script
 const SEND_TOKEN = "LPKb1-7x9q-2026z";    // <-- sama dgn ACCESS_TOKEN di Code.gs
-const HASH_SALT = "lkpd_bab1::v1::";
+const HASH_SALT = "lkpd_bab2::v1::";
 /* ====================================== */
 
 let currentRole = null;
