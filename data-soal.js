@@ -7,11 +7,11 @@
 
 window.LKPD_DATA = {
   settings: {
-    teacherPasswordHash: "878a739c3926b9696d2f49e34ed1d397990a2fba902c882ab0ea56b0ea4295b9",          // tempel hash dari generateTeacherHash('PasswordAnda')
+    teacherPasswordHash: "08539cbdb6a79e9777f9b0fc249078f1890a2492047011a0626eb1c416e7aada",          // tempel hash dari generateTeacherHash('PasswordAnda')
     sessionKey: "lkpd_bab2_session_v1",
     stateKey:   "lkpd_bab2_state_v1",
     listeningPlayCount: 2,
-    showListeningControls: false,      // true untuk latihan bebas; false untuk mini test
+    showListeningControls: false      // true untuk latihan bebas; false untuk mini test
     babId: "bab2" 
   },
 
